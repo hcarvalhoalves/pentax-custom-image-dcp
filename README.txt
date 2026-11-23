@@ -6,10 +6,10 @@ These profiles are constructed by reverse-engineering the 3x3 look matrices that
 
 Gold and Cross Processing are mostly three per-channel RGB curves, taken from PENTAX Digital Camera Utility 5, which tint greys. A DCP cannot do that, so the curves are in LUT/ as 1D .cube files. Apply them to the finished, sRGB-encoded render, after the profile and tone curve:
 
-  Gold              Natural profile           + LUT/PENTAX Custom Image Gold.cube
-  Cross Processing  Cross Processing profile  + LUT/PENTAX Custom Image Cross Processing.cube
+  Gold              Natural profile  + LUT/PENTAX Custom Image Gold.cube
+  Cross Processing  Natural profile  + LUT/PENTAX Custom Image Cross Processing.cube
 
-The Cross Processing profile holds only the matrix the camera applies before those curves; on its own it is a mild look, not Cross Processing.
+For software that cannot read DCP files, LUT/ also has every other look as a 3D .cube LUT, made from its profile. They take an sRGB image already rendered neutrally and return it in the look, sRGB in and sRGB out. LUT/README.txt describes the colour spaces and how to use them.
 
 ---
 

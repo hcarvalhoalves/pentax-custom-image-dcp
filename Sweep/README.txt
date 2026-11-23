@@ -19,7 +19,6 @@ Radiant                           16.8 / 14       4.8 /   0      3.5 /    0
 Muted                             10.9 / 13       1.6 /   0      1.4 /    0
 Bleach Bypass                      9.6 /  2       3.2 /   0      2.6 /    0
 Reversal Film                     19.1 / 11       4.4 /   0      2.6 /    0
-Cross Processing                  13.7 / 11       2.0 /   0      2.1 /    0
 Monochrome                         7.3 / 13       2.1 /   0      1.7 /    0
 SATOBI                            15.1 / 11       2.3 /   0      2.0 /    0
 KATEN                             20.0 / 15       4.6 /   0      2.6 /    0
