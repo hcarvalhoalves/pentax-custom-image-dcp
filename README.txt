@@ -4,8 +4,6 @@ This repository contains DCP files that match PENTAX's in-camera Custom Image pr
 
 These profiles are constructed by reverse-engineering the 3x3 look matrices that PENTAX implemented as Custom Image profiles in-camera, and tuned for the DNG Color Matrix embedded on the DNG files for each camera.
 
-Each profile also carries the camera's own tone curve for that Custom Image, computed by running the PENTAX K-1 II firmware's curve builder on the Custom Image's factory settings (Contrast, High/Low Key, Highlight/Shadow contrast). It matches the JPEGs PENTAX bodies embed in their DNGs to 1-4 levels in 8-bit. The curve is the camera's with D-Range highlight correction off; with it on, the camera keeps more detail in the top stop and a half. The camera's curve reaches pure white just below the raw's clip; the profiles round off the last half stop instead, so the curve keeps rising to white (a flat top breaks renderers that invert the curve, such as Revelar), and a clipped raw renders a few levels under white. Muted and Bleach Bypass also include their default Saturation (-4 and -3). Cross Processing and Monochrome use Natural's curve.
-
 Gold and Cross Processing are mostly three per-channel RGB curves, taken from PENTAX Digital Camera Utility 5, which tint greys. A DCP cannot do that, so the curves are in LUT/ as 1D .cube files. Apply them to the finished, sRGB-encoded render, after the profile and tone curve:
 
   Gold              Natural profile           + LUT/PENTAX Custom Image Gold.cube
